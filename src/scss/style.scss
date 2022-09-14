@@ -1,11 +1,488 @@
+$green: #54be90;
+$white: #ffffff;
+$lightGrey: #ebebeb;
+$textGrey: #444444;
+$darkGrey: #232323;
+$w-regular: 400;
+$w-bold: 700;
+$w-extrabold: 800;
+
+@mixin heading($margin, $color, $weight, $size) {
+  text-align: center;
+  margin: $margin;
+  color: $color;
+  font-weight: $weight;
+  font-size: $size;
+}
+
 html {
-box-sizing: border-box;
+  box-sizing: border-box;
+  background: white;
+  font-family: "Alegreya Sans", sans-serif;
 }
 *,
 *:before,
 *:after {
-box-sizing: inherit;
+  box-sizing: inherit;
 }
-body{
-margin: 0;
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 50px;
+    cursor: pointer;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 2rem;
+    background: $textGrey;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      padding: 5px;
+      color: $lightGrey;
+      text-decoration: none;
+      font-weight: $w-regular;
+      text-align: center;
+
+      &:hover {
+        background-color: $green;
+      }
+    }
+  }
+}
+
+.home {
+  margin-top: 50px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/img/flower.jpeg") center;
+  padding: 100px;
+
+  h1 {
+    @include heading(0, $white, $w-regular, 2rem);
+    margin-bottom: 10px;
+
+    span {
+      color: $green;
+      border-bottom: 5px solid $white;
+    }
+  }
+
+  h2 {
+    @include heading(0, $white, $w-regular, 1.5rem);
+  }
+}
+
+.motto {
+  padding: 50px;
+  p {
+    text-align: center;
+  }
+}
+
+.process {
+  background: $darkGrey;
+  display: flex;
+  justify-content: center;
+
+  padding: 0 50px;
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 150px;
+    flex: 1 1 auto;
+
+    padding: 15px;
+
+    div {
+      width: 90px;
+      height: 100px;
+      background: $white;
+      border-radius: 50%;
+      margin-top: -65px;
+    }
+
+    h3 {
+      color: $green;
+      text-align: center;
+    }
+    p {
+      color: $lightGrey;
+      text-align: center;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.skills {
+  padding: 50px 15%;
+  h2 {
+    @include heading(1rem, $green, $w-bold, 2rem);
+  }
+  .charts {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .chart {
+      display: flex;
+
+      &:hover {
+        box-shadow: 0px 1px 5px 1px #000000;
+
+        font-weight: $w-extrabold;
+      }
+      div {
+        height: 2.3rem;
+      }
+      .lang {
+        background-color: $textGrey;
+        width: 150px;
+        color: $lightGrey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .chart_show {
+        display: flex;
+        width: 100%;
+
+        .chart_learn {
+          background-color: $green;
+        }
+        .chart_remain {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          background-color: $lightGrey;
+          color: $textGrey;
+          padding-right: 5px;
+        }
+      }
+      .html {
+        .chart_learn {
+          width: 80%;
+        }
+        .chart_remain {
+          width: 20%;
+        }
+      }
+      .css {
+        .chart_learn {
+          width: 80%;
+        }
+        .chart_remain {
+          width: 20%;
+        }
+      }
+      .js {
+        .chart_learn {
+          width: 70%;
+        }
+        .chart_remain {
+          width: 30%;
+        }
+      }
+      .react {
+        .chart_learn {
+          width: 60%;
+        }
+        .chart_remain {
+          width: 40%;
+        }
+      }
+      .jquery {
+        .chart_learn {
+          width: 70%;
+        }
+        .chart_remain {
+          width: 30%;
+        }
+      }
+      .php {
+        .chart_learn {
+          width: 60%;
+        }
+        .chart_remain {
+          width: 40%;
+        }
+      }
+      .lavarel {
+        .chart_learn {
+          width: 60%;
+        }
+        .chart_remain {
+          width: 40%;
+        }
+      }
+      .ux {
+        .chart_learn {
+          width: 50%;
+        }
+        .chart_remain {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.portfolio {
+  background: $green;
+  padding: 50px;
+
+  h2 {
+    @include heading(1rem, $white, $w-bold, 2rem);
+  }
+  .cards {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card {
+      width: 33.3%;
+      background: $white;
+      border: 5px solid $green;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1%;
+
+      img {
+        width: 100%;
+      }
+
+      &_bottom {
+        background-color: $lightGrey;
+        border-top: 5px solid $white;
+        padding: 5px;
+        width: 100%;
+        p {
+          font-size: 0.7rem;
+          color: $textGrey;
+          text-align: center;
+          width: 70%;
+          margin: 10px auto;
+        }
+
+        h4 {
+          margin: 0;
+          height: 2rem;
+        }
+
+        button {
+          display: none;
+          background: $green;
+          border: none;
+          width: 100%;
+          height: 2rem;
+          color: white;
+          box-shadow: 0px 1px 5px 1px #000000;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $white;
+            color: $green;
+            font-weight: $w-extrabold;
+            box-shadow: 0px 1px 5px 1px $darkGrey;
+          }
+        }
+      }
+      &:hover {
+        background-color: $darkGrey;
+        .card_bottom {
+          border-color: $darkGrey;
+        }
+        h4 {
+          display: none;
+        }
+        button {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.about {
+    padding: 50px;
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    
+    gap: 20px;
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+    .text {
+      width: 80%;
+      font-size: 0.7rem;
+    }
+    button {
+      background: $green;
+      border: none;
+      width: 50%;
+      height: 2rem;
+      color: white;
+      box-shadow: 0px 1px 5px 1px #000000;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $white;
+        color: $green;
+        font-weight: $w-extrabold;
+        box-shadow: 0px 1px 5px 1px $darkGrey;
+      }
+    }
+  }
+}
+
+.find-me {
+  background-color: $darkGrey;
+  padding: 50px;
+
+  h2 {
+    @include heading(0, $white, $w-bold, 2rem);
+  }
+  .container {
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    img {
+      width: 70px;
+      filter: invert(1);
+    }
+  }
+}
+
+.contact {
+  background-color: $green;
+  padding: 50px;
+
+  h2 {
+    @include heading(0, $white, $w-bold, 2rem);
+  }
+  form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    input,
+    label {
+      width: 48%;
+      height: 1.5rem;
+      margin-top: 20px;
+      color: $lightGrey;
+      background-color: $green;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active {
+        -webkit-text-fill-color: $lightGrey;
+        -webkit-box-shadow: 0 0 0px 1000px $green inset;
+      }
+
+      &::placeholder {
+        color: $lightGrey;
+      }
+    }
+    textarea {
+      resize: none;
+      width: 100%;
+      height: 7rem;
+      font-family: inherit;
+      font-size: 1.1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 5px;
+      margin: 10px 0;
+      color: $white;
+      background-color: $darkGrey;
+      font-weight: $w-bold;
+
+      &:hover {
+        color: $darkGrey;
+        background-color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+footer {
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+
+    h2 {
+      width: 20rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: $w-extrabold;
+    }
+    .line {
+      margin-top: -0.5rem;
+      width: 200px;
+      height: 1rem;
+      border-bottom: 5px solid $green;
+    }
+  }
+  .container {
+    padding: 50px;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    img {
+      width: 40px;
+      filter: invert(0.7);
+    }
+  }
+
+  p {
+    text-align: center;
+    color: $textGrey;
+  }
 }
