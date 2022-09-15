@@ -132,7 +132,7 @@ header {
     @include heading(1rem, $green, $w-bold, 2rem);
   }
   .charts {
-    height: 40vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -320,7 +320,7 @@ header {
   }
 }
 .about {
-    padding: 50px;
+  padding: 50px;
   h2 {
     text-align: center;
     font-size: 2rem;
@@ -331,7 +331,7 @@ header {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    
+
     gap: 20px;
 
     img {
