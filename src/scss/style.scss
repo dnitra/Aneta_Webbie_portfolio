@@ -102,20 +102,25 @@ header {
   background: $darkGrey;
   display: flex;
   justify-content: center;
-
+  width: 100%;
   padding: 0 50px;
+
+  flex-wrap: wrap;
+
+  
 
   .step {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    max-width: 150px;
-    flex: 1 1 auto;
+    min-width: 50%;
+    border-bottom: 1px solid $white;
 
     padding: 15px;
 
     div {
+      display: none;
       width: 90px;
       height: 100px;
       background: $white;
@@ -131,6 +136,21 @@ header {
       color: $lightGrey;
       text-align: center;
       font-size: 0.7rem;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+  
+    flex-wrap: nowrap;
+    .step {
+      min-width: 150px;
+      max-width: 150px;
+
+      border: none;
+
+      div {
+        display: block;
+      }
     }
   }
 }
@@ -262,9 +282,10 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
 
     .card {
-      width: 33.3%;
+      width: 90%;
       background: $white;
       border: 5px solid $green;
 
@@ -272,6 +293,12 @@ header {
       flex-direction: column;
       align-items: center;
       padding: 1%;
+      margin: 0 auto;
+
+      @media screen and (min-width: 800px) {
+        width: 33.3%;
+        
+      }
 
       img {
         width: 100%;
@@ -305,7 +332,7 @@ header {
           box-shadow: 0px 1px 5px 1px #000000;
           cursor: pointer;
 
-          &:hover {
+          &:hover{
             background-color: $white;
             color: $green;
             font-weight: $w-extrabold;
@@ -313,7 +340,7 @@ header {
           }
         }
       }
-      &:hover {
+      &:hover{
         background-color: $darkGrey;
         .card_bottom {
           border-color: $darkGrey;
@@ -337,12 +364,16 @@ header {
   }
   .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-
     gap: 20px;
 
+    @media screen and (min-width:800px) {
+      flex-wrap: nowrap;
+      
+    }
     img {
       width: 200px;
       height: 200px;
@@ -408,12 +439,17 @@ header {
 
     input,
     label {
-      width: 48%;
+      width: 100%;
       height: 1.5rem;
       margin-top: 20px;
       color: $lightGrey;
       background-color: $green;
       border: none;
+
+       @media screen and (min-width:800px) {
+      width: 48%;
+      
+    }
       &:focus {
         outline: none;
       }
