@@ -13,6 +13,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header>
@@ -30,7 +32,7 @@
 
       <h2>I'm Full-stack Web Developer.</h2>
     </section>
-    <section class="motto">
+    <section class="motto hidden">
       <p>
         Let's work together to make <strong>your product stand out</strong>. I
         create beatutiful and functional websites. I work with my clients step
@@ -41,7 +43,7 @@
       </p>
     </section>
     <section class="process">
-      <div class="step" tabindex="0">
+      <div class="step hidden" tabindex="0">
         <div></div>
         <h3>Discover</h3>
         <p>
@@ -50,7 +52,7 @@
           eos.
         </p>
       </div>
-      <div class="step">
+      <div class="step hidden">
         <div></div>
         <h3>Design</h3>
         <p>
@@ -59,7 +61,7 @@
           eos.
         </p>
       </div>
-      <div class="step" tabindex="0">
+      <div class="step hidden" tabindex="0">
         <div></div>
         <h3>Deploy</h3>
         <p>
@@ -68,7 +70,7 @@
           eos.
         </p>
       </div>
-      <div class="step">
+      <div class="step hidden">
         <div></div>
         <h3>Be ready</h3>
         <p>
@@ -81,56 +83,56 @@
     <section id="skills" class="skills">
       <h2>MY SKILSS</h2>
       <div class="charts">
-        <div class="chart">
+        <div class="chart hidden">
           <div class="lang">HTML</div>
           <div  class="chart_show html">
             <div class="chart_learn"></div>
             <div class="chart_remain">80%</div>
           </div>
         </div>
-        <div class="chart">
+        <div class="chart hidden">
           <div class="lang">CSS Sass</div>
           <div class="chart_show css">
             <div class="chart_learn"></div>
             <div class="chart_remain">80%</div>
           </div>
         </div>
-        <div class="chart">
+        <div class="chart hidden">
           <div class="lang">JavaScript</div>
           <div class="chart_show js">
             <div class="chart_learn"></div>
             <div class="chart_remain">70%</div>
           </div>
         </div>
-        <div class="chart">
+        <div class="chart hidden">
           <div class="lang">React</div>
           <div class="chart_show react">
             <div class="chart_learn"></div>
             <div class="chart_remain">60%</div>
           </div>
         </div>
-        <div class="chart">
+        <div class="chart hidden">
           <div class="lang">jQuery</div>
           <div class="chart_show jquery">
             <div class="chart_learn"></div>
             <div class="chart_remain">70%</div>
           </div>
         </div>
-        <div class="chart">
+        <div class="chart hidden">
           <div class="lang">PHP</div>
           <div class="chart_show php">
             <div class="chart_learn"></div>
             <div class="chart_remain">60%</div>
           </div>
         </div>
-        <div class="chart">
+        <div class="chart hidden">
           <div class="lang">Laravel</div>
           <div class="chart_show lavarel">
             <div class="chart_learn"></div>
             <div class="chart_remain">60%</div>
           </div>
         </div>
-        <div class="chart">
+        <div class="chart hidden">
           <div class="lang">UX</div>
           <div class="chart_show ux">
             <div class="chart_learn"></div>
@@ -142,7 +144,7 @@
     <section id="portfolio" class="portfolio">
         <h2>MY PORTFOLIO</h2>
       <div class="cards">
-        <div class="card">
+        <div class="card hidden">
           <img src="img/placeholder-image.jpeg" alt="" />
           <div class="card_bottom">
             <p>
@@ -153,7 +155,7 @@
             <button>Explore</button>
           </div>
         </div>
-        <div class="card">
+        <div class="card hidden">
           <img src="img/placeholder-image.jpeg" alt="" />
           <div class="card_bottom">
             <p>
@@ -165,7 +167,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card hidden">
           <img src="img/placeholder-image.jpeg" alt="" />
           <div class="card_bottom">
             <p>
@@ -176,7 +178,7 @@
             <button>Explore</button>
           </div>
         </div>
-        <div class="card">
+        <div class="card hidden">
           <img src="img/placeholder-image.jpeg" alt="" />
           <div class="card_bottom">
             <p>
@@ -187,7 +189,7 @@
             <button>Explore</button>
           </div>
         </div>
-        <div class="card">
+        <div class="card hidden">
           <img src="img/placeholder-image.jpeg" alt="" />
           <div class="card_bottom">
             <p>
@@ -198,7 +200,7 @@
             <button>Explore</button>
           </div>
         </div>
-        <div class="card">
+        <div class="card hidden">
           <img src="img/placeholder-image.jpeg" alt="" />
           <div class="card_bottom">
             <p>
@@ -214,8 +216,8 @@
     <section id="about" class="about">
       <h2>ABOUT ME</h2>
       <div class="container">
-        <img src="img/Aneta_picture.png" alt="My picture" />
-        <div class="text">
+        <img class=" hidden" src="img/Aneta_picture.png" alt="My picture" />
+        <div class="text  hidden">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
             consectetur delectus ab odit in. Corporis laborum cumque unde
@@ -235,7 +237,7 @@
             iste itaque?
           </p>
           <p><strong>Get in touch and let's do something together</strong></p>
-          <button>Contact me</button>
+          <button class=" hidden">Contact me</button>
         </div>
       </div>
     </section>
@@ -243,17 +245,17 @@
       <h2>FIND ME HERE</h2>
       <div class="container">
         <a href="https://www.github.com"
-          ><img src="img/github_logo.png" alt="Git hub"
+          ><img class=" hidden" src="img/github_logo.png" alt="Git hub"
         /></a>
         <a href="https://www.linkedin.com"
-          ><img src="img/linkedIn_logo.png" alt="Linkedin"
+          ><img class=" hidden" src="img/linkedIn_logo.png" alt="Linkedin"
         /></a>
         <a href="https://www.instagram.com"
-          ><img src="img/instagram_logo.png" alt="Instagran"
+          ><img class=" hidden" src="img/instagram_logo.png" alt="Instagran"
         /></a>
       </div>
     </section>
-    <section id="contact" class="contact">
+    <section id="contact" class="contact hidden">
       <h2>CONTACT ME</h2>
       <form action="">
         <input type="text" name="fname" placeholder="First Name *" required />
@@ -262,10 +264,10 @@
         <input type="tel" name="tel" placeholder="Phone" />
         <label for="message">My message *</label>
         <textarea name="message" id="message" required></textarea>
-        <button type="submit">Send my message</button>
+        <button class=" hidden" type="submit">Send my message</button>
       </form>
     </section>
-    <footer>
+    <footer class="hidden">
     
       <div class="heading">
           <div class="line"></div>
@@ -273,17 +275,17 @@
           <div class="line"></div>
       </div class="heading">
       <div class="container">
-        <a href="https://www.github.com"
+        <a class=" hidden" href="https://www.github.com"
           ><img src="img/github_logo.png" alt="Git hub"
         /></a>
-        <a href="https://www.linkedin.com"
+        <a class=" hidden" href="https://www.linkedin.com"
           ><img src="img/linkedIn_logo.png" alt="Linkedin"
         /></a>
-        <a href="https://www.instagram.com"
+        <a class=" hidden" href="https://www.instagram.com"
           ><img src="img/instagram_logo.png" alt="Instagran"
         /></a>
       </div>
-      <p>© @Aneta Webbie 2018</p>
+      <p>Copyright @Aneta Webbie 2018</p>
     </footer>
   </body>
 </html>
